@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --text-color: #333;
+  --light-bg: #ecf0f1;
+  --dark-bg: #2c3e50;
+  --completed-course: #12522c;
+  --incomplete-course: #bdc3c7;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: var(--light-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.site-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: 0.3s;
+}
+
+nav {
+  background-color: var(--dark-bg);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: background-color 0.3s;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav li:last-child a {
+  border-right: none;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+nav a.active {
+  background-color: var(--secondary-color);
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+section {
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 450px;
+}
+
+.section-header {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.section-content {
+  padding: 2rem;
+}
+
+.about-grid {
+
+  gap: 2rem;
+}
+
+.about-text {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.student-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+img {
+height: 500px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--light-bg);
+  border: 2px solid var(--dark-bg);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: var(--text-color);
+}
+
+.filter-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.filter-btn.active {
+  background-color: var(--dark-bg);
+  color: white;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-card {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card.completed {
+  background-color: var(--completed-course);
+  color: white;
+}
+
+.course-card.incomplete {
+  background-color: var(--incomplete-course);
+  color: var(--text-color);
+}
+
+.credits-display {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-radius: 4px;
+}
+
+footer {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-info {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Layout: place 'About Me' and 'Student Photo' side-by-side on wide screens */
+@media (min-width: 769px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Make the page title span both columns */
+  main > h1 {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+  }
+
+ 
+
+  /* Make the following sections (courses, etc.) span both columns */
+  main > section:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* Ensure the student photo scales nicely inside its column */
+  .student-photo img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+}
