@@ -140,6 +140,8 @@ section {
 
 .section-content {
   padding: 2rem;
+
+
 }
 
 .about-grid {
@@ -278,20 +280,18 @@ footer {
     align-items: start;
   }
 
-  /* Make the page title span both columns */
+
   main > h1 {
     grid-column: 1 / -1;
     margin-bottom: 1rem;
   }
 
- 
 
-  /* Make the following sections (courses, etc.) span both columns */
+
   main > section:nth-of-type(3) {
     grid-column: 1 / -1;
   }
 
-  /* Ensure the student photo scales nicely inside its column */
   .student-photo img {
     height: auto;
     max-width: 100%;

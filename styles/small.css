@@ -36,6 +36,13 @@
   main {
     padding: 0 1rem;
   }
+
+ 
+  .section-content {
+    max-height: 60vh; 
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
 }
 
 @media (max-width: 480px) {
