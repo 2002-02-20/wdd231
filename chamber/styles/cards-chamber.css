@@ -360,7 +360,7 @@
 
 .card-content p {
     margin: 0.5rem 0;
-    color: #666;
+    color: black;
     font-size: 0.9rem;
 }
 
@@ -372,12 +372,12 @@
 
 .card-contact p {
     margin: 0.5rem 0;
-    color: #666;
+    color: black;
     font-size: 0.9rem;
 }
 
 .card-contact a {
-    color: #007bff;
+    color: #013b79;
     text-decoration: none;
     font-size: 0.9rem;
     display: inline-block;
