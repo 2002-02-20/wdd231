@@ -94,13 +94,13 @@ function renderdataJson(apiData) {
 function getMembershipLevel(level) {
   switch (level) {
     case 1:
-      return "Bronce";
+      return "Bronze";
     case 2:
-      return "Plata";
+      return "Silver";
     case 3:
-      return "Oro";
+      return "Gold";
     default:
-      return "Miembro";
+      return "Member";
   }
 }
 
