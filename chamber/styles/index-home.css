@@ -1,0 +1,499 @@
+/* ============================================
+   Main Container
+   ============================================ */
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 8px;
+    height: 400px;
+    background-color: rgb(221, 220, 220);
+}
+
+.hero-image {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #122836 0%, #347fa8 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-shadow: none;
+}
+
+.cta-button:hover {
+      background: linear-gradient(135deg, #4eb0ec 0%, #153141 100%);
+;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Events Section
+   ============================================ */
+.events-section {
+    margin: 3rem 0;
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;   
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.event-card p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.event-card p strong {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   Weather Section
+   ============================================ */
+.weather-section {
+    margin: 3rem 0;
+}
+
+.weather-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.current-weather {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#weather-info {
+    font-size: 1.1rem;
+}
+
+#weather-info p {
+    margin-bottom: 0.5rem;
+}
+
+.forecast {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.forecast-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.forecast-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.forecast-card p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.forecast-card .temp {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* ============================================
+   Spotlight Section
+   ============================================ */
+.spotlight-section {
+    margin: 3rem 0 5rem;
+}
+
+.spotlight-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.spotlight-logo {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.spotlight-logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+.spotlight-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.spotlight-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.spotlight-badge.gold {
+    background: #ffbb00;
+    color: black;
+}
+
+
+
+.spotlight-info {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.spotlight-info strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.spotlight-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.spotlight-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.spotlight-link:hover {
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+.loading {
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* ============================================
+   Mobile Responsive
+   ============================================ */
+@media (max-width: 900px) {
+    .mainContainer {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        height: 300px;
+        margin: 1.5rem 0;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .weather-container {
+        grid-template-columns: 1fr;
+    }
+
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        height: 250px;
+        margin: 1rem 0;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .events-section h2,
+    .weather-section h2,
+    .spotlight-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .event-card {
+        padding: 1rem;
+    }
+
+    .current-weather,
+    .forecast {
+        padding: 1.5rem;
+    }
+
+    .spotlight-container {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .forecast-card {
+        padding: 0.75rem;
+    }
+
+    .forecast-card h4 {
+        font-size: 0.85rem;
+    }
+
+    .forecast-card .temp {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        height: 200px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .events-section h2,
+    .weather-section h2,
+    .spotlight-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .forecast-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-content {
+        padding: 1rem;
+    }
+
+    .spotlight-logo {
+        padding: 1rem;
+    }
+}
+
+/* ============================================
+   Hero Carousel
+   ============================================ */
+.title_index {
+    
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.5rem;
+    
+}
+
+.hero-carousel .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    object-fit: cover;
+}
+
+.hero-carousel .hero-image.active {
+    opacity: 1;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}

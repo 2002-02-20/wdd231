@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <meta name="description" content="WDD231 - Web Frontend Development course - Timbuktu Chamber of Commerce Home Page.">
+    <meta name="author" content="Derek Abraham Moscui Maldonado">
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="./styles/index-home.css">
+
+    <!-- scripts -->
+    <script src="../scripts/date.js" defer></script>
+    <script src="../scripts/mobile-menu.js" defer></script>
+    <script src="./scripts/openWeatherMap_API.js" defer></script>
+    <script src="./scripts/spotlight-members.js" defer></script>
+    <script src="./scripts/hero-carousel.js" defer></script>
+    <!-- scripts -->
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="./images/pinIcon.png" alt="Timbuktu Chamber of Commerce Logo" width="40" height="40">
+                </div>
+                <span>Timbuktu Chamber of Commerce</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="./index.html" class="items_menu">Home</a>
+                <a href="./directory.html" class="items_menu">Directory</a>
+                <a href="#" class="items_menu">Join</a>
+                <a href="#" class="items_menu">Discover</a>
+                <div class="theme-toggle"></div>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="mobile-nav">
+                <a href="./index.html" class="items_menu">Home</a>
+                <a href="./directory.html" class="items_menu">Directory</a>
+                <a href="#" class="items_menu">Join</a>
+                <a href="#" class="items_menu">Discover</a>
+            </nav>
+
+            <div class="theme-toggle" style="display: none;"></div>
+        </div>
+    </header>
+
+    <main class="mainContainer">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-carousel">
+                <img src="./images/hero-timbuktu.webp" alt="Timbuktu cityscape" class="hero-image active">
+            </div>
+            <div class="hero-overlay">
+                <h1 class="title_index">Welcome to Timbuktu Chamber of Commerce</h1>
+                <a href="#" class="cta-button">Join Now</a>
+            </div>
+            <div class="carousel-dots"></div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-container">
+                <article class="event-card">
+                    <h3>Business Networking Breakfast</h3>
+                    <p><strong>Date:</strong> November 20, 2025</p>
+                    <p><strong>Time:</strong> 8:00 AM - 10:00 AM</p>
+                    <p><strong>Location:</strong> Timbuktu Convention Center</p>
+                    <p>Join us for an early morning networking breakfast with local business leaders.</p>
+                </article>
+
+                <article class="event-card">
+                    <h3>Trade Fair 2025</h3>
+                    <p><strong>Date:</strong> December 5-7, 2025</p>
+                    <p><strong>Location:</strong> Timbuktu Exhibition Grounds</p>
+                    <p>Showcase your products and services to hundreds of potential customers and partners.</p>
+                </article>
+
+                <article class="event-card">
+                    <h3>Chamber General Meeting</h3>
+                    <p><strong>Date:</strong> November 28, 2025</p>
+                    <p><strong>Time:</strong> 2:00 PM</p>
+                    <p><strong>Location:</strong> Chamber Headquarters</p>
+                    <p>Monthly meeting to discuss chamber initiatives and community projects.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h2>Current Weather</h2>
+            <div class="weather-container">
+                <div class="current-weather">
+                    <div id="weather-info">
+                        <p class="loading">Loading weather information...</p>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast-container" class="forecast-cards">
+                        <p class="loading">Loading forecast...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlight Section -->
+        <section class="spotlight-section">
+            <h2>Featured Members</h2>
+            <div id="spotlight-container" class="spotlight-container">
+                <p class="loading">Loading featured members...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Timbuktu Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Timbuktu, Mali 999</p>
+                <p>info@timbuktuce.org</p>
+                <p>(223) 555-2300</p>
+
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            </div>
+            <div class="footer-right">
+
+                <p>WDD231 Class Project</p>
+                <p>👨‍💻 Derek Abraham Moscui Maldonado 👨‍💻</p>
+                <p><span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+                <p id="lastModified">Last Modification: </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

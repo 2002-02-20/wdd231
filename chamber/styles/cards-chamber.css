@@ -44,7 +44,7 @@
 }
 
 .view-button.active {
-    background: #333;
+   background: linear-gradient(135deg, #122836 0%, #347fa8 100%);
     color: white;
     border-color: #333;
     font-weight: 500;
@@ -149,7 +149,7 @@
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 4px;
-    color: #0056b3;
+    color: #002144;
     text-decoration: none;
     transition: all 0.2s ease;
 }
