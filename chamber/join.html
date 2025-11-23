@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Join</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="WDD231 - Web Frontend Development course - Timbuktu Chamber of Commerce Home Page.">
+    <meta name="author" content="Derek Abraham Moscui Maldonado">
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="./styles/index-home.css">
+    <link rel="stylesheet" href="./styles/join.css">
+
+    <!-- scripts -->
+    <script src="../scripts/date.js" defer></script>
+    <script src="../scripts/mobile-menu.js" defer></script>
+    <script src="./scripts/join-form.js" defer></script>
+    <!-- scripts -->
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="./images/pinIcon.png" alt="Timbuktu Chamber of Commerce Logo" width="40" height="40">
+                </div>
+                <span>Timbuktu Chamber of Commerce</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="./index.html" class="items_menu">Home</a>
+                <a href="./directory.html" class="items_menu">Directory</a>
+                <a href="./join.html" class="items_menu">Join</a>
+                <a href="#" class="items_menu">Discover</a>
+                <div class="theme-toggle"></div>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="mobile-nav">
+                <a href="./index.html" class="items_menu">Home</a>
+                <a href="./directory.html" class="items_menu">Directory</a>
+                <a href="./join.html" class="items_menu">Join</a>
+                <a href="#" class="items_menu">Discover</a>
+            </nav>
+
+            <div class="theme-toggle" style="display: none;"></div>
+        </div>
+    </header>
+   <main class="mainContainer">
+        <section class="join-section">
+            <h1>Join the Timbuktu Chamber of Commerce</h1>
+            <p class="intro-text">Become part of our community and grow your business with us</p>
+            
+            <div class="join-container">
+                <!-- Form Column -->
+                <div class="form-column">
+                    <form method="GET" action="thankyou.html" id="joinForm">
+                        <!-- First Name -->
+                        <label for="firstName">
+                            First Name
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                title="Enter your first name"
+                                autocomplete="given-name"
+                                required>
+                        </label>
+
+                        <!-- Last Name -->
+                        <label for="lastName">
+                            Last Name
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                title="Enter your last name"
+                                autocomplete="family-name"
+                                required>
+                        </label>
+
+                        <!-- Organizational Title -->
+                        <label for="orgTitle">
+                            Organizational Title
+                            <input 
+                                type="text" 
+                                id="orgTitle" 
+                                name="orgTitle" 
+                                title="Your title within your organization"
+                                autocomplete="organization-title"
+                                pattern="[a-zA-Z\s\-]{7,}"
+                                placeholder="e.g., Business Manager"
+                                title="Minimum 7 characters (letters, hyphens, and spaces only)">
+                        </label>
+
+                        <!-- Email -->
+                        <label for="email">
+                            Email Address
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                title="Enter a valid email address"
+                                autocomplete="email"
+                                placeholder="example@email.com"
+                                required>
+                        </label>
+
+                        <!-- Phone -->
+                        <label for="phone">
+                            Phone Number
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                title="Enter your phone number"
+                                autocomplete="tel"
+                                required>
+                        </label>
+
+                        <!-- Business Name -->
+                        <label for="businessName">
+                            Business/Organization Name
+                            <input 
+                                type="text" 
+                                id="businessName" 
+                                name="businessName" 
+                                title="Enter your business or organization name"
+                                autocomplete="organization"
+                                required>
+                        </label>
+
+                        <!-- Membership Level -->
+                        <label for="membership">
+                            Membership Level
+                            <select id="membership" name="membership" required>
+                                <option value="">Select a membership level</option>
+                                <option value="np">NP Membership - Free</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+
+                        <!-- Business Description -->
+                        <label for="businessDesc">
+                            Business Description
+                            <textarea 
+                                id="businessDesc" 
+                                name="businessDesc" 
+                                title="Describe your business or organization"
+                                rows="4"
+                                placeholder="Tell us about your business..."></textarea>
+                        </label>
+
+                        <!-- Timestamp -->
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">Join Now</button>
+                    </form>
+                </div>
+
+                <!-- Membership Cards Column -->
+                <div class="membership-column">
+                    <h2>Membership Levels</h2>
+                    <div class="membership-cards">
+                        <!-- NP Membership Card -->
+                        <div class="membership-card np-card">
+                            <h3>NP Membership</h3>
+                            <p class="price">Free</p>
+                            <p class="description">For non-profit organizations</p>
+                            <button class="info-btn" data-modal="npModal">Learn More</button>
+                        </div>
+
+                        <!-- Bronze Membership Card -->
+                        <div class="membership-card bronze-card">
+                            <h3>Bronze Membership</h3>
+                            <p class="price">$99/month</p>
+                            <p class="description">Essential benefits for growing businesses</p>
+                            <button class="info-btn" data-modal="bronzeModal">Learn More</button>
+                        </div>
+
+                        <!-- Silver Membership Card -->
+                        <div class="membership-card silver-card">
+                            <h3>Silver Membership</h3>
+                            <p class="price">$199/month</p>
+                            <p class="description">Advanced benefits and networking</p>
+                            <button class="info-btn" data-modal="silverModal">Learn More</button>
+                        </div>
+
+                        <!-- Gold Membership Card -->
+                        <div class="membership-card gold-card">
+                            <h3>Gold Membership</h3>
+                            <p class="price">$299/month</p>
+                            <p class="description">Premium benefits and exclusive access</p>
+                            <button class="info-btn" data-modal="goldModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- NP Membership Modal -->
+    <dialog id="npModal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Access to member directory</li>
+                <li>Monthly newsletter</li>
+                <li>Community event invitations</li>
+                <li>Networking opportunities</li>
+            </ul>
+            <p class="modal-footer">Perfect for non-profit organizations looking to connect with the community</p>
+        </div>
+    </dialog>
+
+    <!-- Bronze Membership Modal -->
+    <dialog id="bronzeModal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP Membership benefits</li>
+                <li>Business listing on website</li>
+                <li>Quarterly training workshops</li>
+                <li>Event discount (10%)</li>
+                <li>Email marketing support</li>
+            </ul>
+            <p class="modal-footer">Great for small and medium-sized businesses</p>
+        </div>
+    </dialog>
+
+    <!-- Silver Membership Modal -->
+    <dialog id="silverModal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>Featured listing on website</li>
+                <li>Monthly spotlight on social media</li>
+                <li>Event discount (20%)</li>
+                <li>Exclusive networking events</li>
+                <li>Advanced training programs</li>
+                <li>Logo in chamber newsletter</li>
+            </ul>
+            <p class="modal-footer">Ideal for established businesses ready to expand</p>
+        </div>
+    </dialog>
+
+    <!-- Gold Membership Modal -->
+    <dialog id="goldModal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close modal">&times;</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver Membership benefits</li>
+                <li>Premium spotlight on home page</li>
+                <li>Weekly social media features</li>
+                <li>Event discount (30%)</li>
+                <li>VIP-only events and networking</li>
+                <li>Professional consulting access</li>
+                <li>Custom advertising packages</li>
+                <li>Priority customer support</li>
+                <li>Annual business review session</li>
+            </ul>
+            <p class="modal-footer">Premium benefits for industry leaders</p>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Timbuktu Chamber of Commerce</h3>
+                <p>10 Rue De La Paix</p>
+                <p>Timbuktu, Mali 999</p>
+                <p>info@timbuktuce.org</p>
+                <p>(223) 555-2300</p>
+
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            </div>
+            <div class="footer-right">
+
+                <p>WDD231 Class Project</p>
+                <p>👨‍💻 Derek Abraham Moscui Maldonado 👨‍💻</p>
+                <p><span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+                <p id="lastModified">Last Modification: </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

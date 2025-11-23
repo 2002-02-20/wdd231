@@ -1,0 +1,381 @@
+/* ============================================
+   Join Section
+   ============================================ */
+.join-section {
+    margin: 2rem 0;
+}
+
+.join-section h1 {
+    font-size: 2.5rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ============================================
+   Form Column
+   ============================================ */
+.form-column {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#joinForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#joinForm label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: var(--text-color);
+    gap: 0.5rem;
+}
+
+#joinForm input,
+#joinForm select,
+#joinForm textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+#joinForm input:focus,
+#joinForm select:focus,
+#joinForm textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+#joinForm input[type="text"],
+#joinForm input[type="email"],
+#joinForm input[type="tel"] {
+    min-height: 44px;
+}
+
+#joinForm select {
+    cursor: pointer;
+    background-color: white;
+}
+
+#joinForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 0.75rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.02);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   Membership Cards Column
+   ============================================ */
+.membership-column {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.membership-column h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Membership Card */
+.membership-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid;
+    animation: slideIn 0.6s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.membership-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.membership-card .description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+/* Membership Card Colors */
+.np-card {
+    background-color: #f0f0f0;
+    border-left-color: #7f8c8d;
+}
+
+.bronze-card {
+    background-color: #fef5f1;
+    border-left-color: #cd7f32;
+}
+
+.silver-card {
+    background-color: #f0f4f8;
+    border-left-color: #c0c0c0;
+}
+
+.gold-card {
+    background-color: #fffbf0;
+    border-left-color: #ffd700;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Info Button */
+.info-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-height: 40px;
+    font-size: 0.95rem;
+}
+
+.info-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.info-btn:active {
+    transform: scale(0.95);
+}
+
+/* ============================================
+   Modal Styles
+   ============================================ */
+.membership-modal {
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    top: 10rem;
+    left: 12rem;
+   
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+   
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.modal-content li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.modal-content li:before {
+    content: "✓ ";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/*
+.modal-footer {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+    font-style: italic;
+}
+*/
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (min-width: 1024px) {
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .membership-column {
+        position: sticky;
+        top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .join-section h1 {
+        font-size: 2rem;
+    }
+
+    .form-column,
+    .membership-column {
+        padding: 1.5rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .membership-modal {
+        width: 95%;
+        top: 7rem;
+        left: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .join-section h1 {
+        font-size: 1.5rem;
+    }
+
+    #joinForm {
+        gap: 1rem;
+    }
+
+    .form-column,
+    .membership-column {
+        padding: 1rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-card {
+        padding: 1rem;
+    }
+
+    .membership-modal {
+        width: 100%;
+        padding: 1.5rem;
+        top: 7rem;
+        left: 0;
+    }
+}

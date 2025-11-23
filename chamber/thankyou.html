@@ -4,37 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Directory</title>
+    <title>Chamber of Commerce - Thank You</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
-    <meta name="description" content="WDD231 - Web Frontend Development course Directory of chamber members.">
+    <meta name="description"
+        content="WDD231 - Web Frontend Development course - Timbuktu Chamber of Commerce Thank You Page.">
     <meta name="author" content="Derek Abraham Moscui Maldonado">
-    <!-- Call to Action -->
     <!-- styles -->
     <link rel="stylesheet" href="../styles/index.css">
-   
-    <link rel="stylesheet" href="./styles/cards-chamber.css">
+    <link rel="stylesheet" href="./styles/index-home.css">
+    <link rel="stylesheet" href="./styles/thankyou.css">
 
-    <!-- styles -->
     <!-- scripts -->
-    <script src="../scripts/date.js" defer></script>
     <script src="../scripts/date.js" defer></script>
     <script src="../scripts/mobile-menu.js" defer></script>
-    <script src="./scripts/data-chamber.js" defer></script>
+    <script src="./scripts/thankyou.js" defer></script>
     <!-- scripts -->
-
 
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="./index.html" class="logo">
                 <div class="logo-icon">
                     <img src="./images/pinIcon.png" alt="Timbuktu Chamber of Commerce Logo" width="40" height="40">
                 </div>
@@ -67,7 +63,58 @@
     </header>
 
     <main class="mainContainer">
-        <h1>Chamber Directory</h1>
+        <section class="thankyou-section">
+            <div class="thankyou-content">
+                <div class="success-icon">✓</div>
+                <h1>Thank You for Joining!</h1>
+                <p class="thankyou-message">We're excited to welcome you to the Timbuktu Chamber of Commerce. Your membership application has been received.</p>
+
+                <div class="form-summary">
+                    <h2>Application Summary</h2>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span class="label">First Name:</span>
+                            <span class="value" id="summaryFirstName">—</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Last Name:</span>
+                            <span class="value" id="summaryLastName">—</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Email:</span>
+                            <span class="value" id="summaryEmail">—</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Phone:</span>
+                            <span class="value" id="summaryPhone">—</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Business Name:</span>
+                            <span class="value" id="summaryBusiness">—</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Submission Date:</span>
+                            <span class="value" id="summaryTimestamp">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h2>What's Next?</h2>
+                    <ul>
+                        <li>Check your email for a confirmation message</li>
+                        <li>Review your membership benefits</li>
+                        <li>Join us at our next networking event</li>
+                        <li>Connect with other chamber members</li>
+                    </ul>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="./index.html" class="btn btn-primary">Back to Home</a>
+                    <a href="./join.html" class="btn btn-secondary">Return to Join</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
