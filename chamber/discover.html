@@ -4,37 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Directory</title>
+    <title>Chamber of Commerce - Discover</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
-    <meta name="description" content="WDD231 - Web Frontend Development course Directory of chamber members.">
+    <meta name="description"
+        content="WDD231 - Web Frontend Development course - Timbuktu Chamber of Commerce Discover Page.">
     <meta name="author" content="Derek Abraham Moscui Maldonado">
-    <!-- Call to Action -->
     <!-- styles -->
     <link rel="stylesheet" href="../styles/index.css">
-   
-    <link rel="stylesheet" href="./styles/cards-chamber.css">
+    <link rel="stylesheet" href="./styles/index-home.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <link rel="stylesheet" href="./styles/discover.css">
 
-    <!-- styles -->
     <!-- scripts -->
-    <script src="../scripts/date.js" defer></script>
     <script src="../scripts/date.js" defer></script>
     <script src="../scripts/mobile-menu.js" defer></script>
-    <script src="./scripts/data-chamber.js" defer></script>
-    <!-- scripts -->
-
-
+    <script src="./scripts/discover.js" type="module" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="./index.html" class="logo">
                 <div class="logo-icon">
                     <img src="./images/pinIcon.png" alt="Timbuktu Chamber of Commerce Logo" width="40" height="40">
                 </div>
@@ -66,8 +61,9 @@
         </div>
     </header>
 
-    <main class="mainContainer">
-        <h1>Chamber Directory</h1>
+    <main class="discover-container">
+        <div class="visitor-message" id="visitorMessage"></div>
+        <div class="cards-grid" id="cardsGrid"></div>
     </main>
 
     <footer>
@@ -94,7 +90,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
