@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyGym – EasyPlan | Personalized Workout Routines</title>
+    <meta
+      name="description"
+      content="EasyGym - EasyPlan: Generate personalized workout routines based on your fitness goals. Simple, effective routines for strength, definition, and time-efficient training."
+    />
+    <meta name="author" content="Derek Abraham Moscui Maldonado" />
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta
+      property="og:title"
+      content="EasyGym – EasyPlan | Personalized Workout Routines"
+    />
+    <meta
+      property="og:description"
+      content="Generate simple, personalized gym routines based on your goals and available time."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/easygym/" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./images/favicon-icon-page.ico"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="./index.html"><h1>EasyGym – EasyPlan</h1></a>
+      </div>
+      <nav class="navbar">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./gymplan.html">Routine Generator</a></li>
+          <li><a href="./history.html">My Routines</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Transform Your Fitness Journey</h2>
+          <p>
+            Create personalized workout routines tailored to your goals in
+            seconds. Whether you want strength, definition, or time-efficient
+            training, EasyGym has you covered.
+          </p>
+          <a href="gymplan.html" class="btn btn-primary"
+            >Start Generating Routines</a
+          >
+        </div>
+        <img src="" alt="" loading="lazy" class="hero-image" />
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <h2>Why Choose EasyGym?</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">💪</div>
+            <h3>Goal-Based Training</h3>
+            <p>
+              Select from strength, definition, or time-reduction focused
+              routines designed for your specific fitness goals.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Quick & Simple</h3>
+            <p>
+              No complex navigation or confusing interfaces. Generate your
+              complete routine in just a few clicks.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Track Your Progress</h3>
+            <p>
+              Save and manage all your routines in one place. Access your
+              workout history anytime, anywhere.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Flexible Durations</h3>
+            <p>
+              Choose routines that fit your schedule, from quick 30-minute
+              workouts to comprehensive sessions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Select Your Goal</h3>
+            <p>
+              Choose between Strength, Definition, or Time Reduction training
+              focus.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Choose Your Level</h3>
+            <p>
+              Pick your experience level: Beginner, Intermediate, or Advanced.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Set Your Duration</h3>
+            <p>
+              Select how much time you can dedicate to your workout (30, 45, or
+              60 minutes).
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <h3>Get Your Routine</h3>
+            <p>
+              Instantly receive a personalized routine with detailed exercises
+              and instructions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call-to-Action Section -->
+      <section class="cta">
+        <h2>Ready to Start Your Fitness Journey?</h2>
+        <p>
+          Don't wait another day. Create your first personalized routine now.
+        </p>
+        <a href="gymplan.html" class="btn btn-primary btn-large"
+          >Generate Your First Routine</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          © <span id="currentYear"></span> EasyGym – EasyPlan. All rights
+          reserved.
+        </p>
+        <p>👨‍💻 Derek Moscui Maldonado 👨‍💻 Quito, Ecuador</p>
+        <p id="lastModified">Last Modification:</p>
+        <div class="footer-links">
+          <a href="./attributions.html">Attributions</a>
+          <a href="#" id="videoLink">Video Demonstration</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="../scripts/date.js" defer></script>
+    <script type="module" src="./scripts/image-hero.js"></script>
+  </body>
+</html>

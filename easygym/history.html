@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Routines | EasyGym – EasyPlan</title>
+    <meta name="description"
+        content="View and manage all your saved workout routines. Access your routine history, review past workouts, and delete routines you no longer need.">
+    <meta name="author" content="Derek Abraham Moscui Maldonado">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="My Routines | EasyGym – EasyPlan">
+    <meta property="og:description"
+        content="Access your complete history of personalized workout routines and manage your saved workouts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/easygym/history.html">
+
+    <!-- Favicon -->
+     <link rel="icon" type="image/svg+xml" href="./images/favicon-hisotry-page.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/history.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+        <a href="./index.html"><h1>EasyGym – EasyPlan</h1></a>
+           
+        </div>
+        <nav class="navbar">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gymplan.html">Routine Generator</a></li>
+                <li><a href="history.html" class="active">My Routines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Title -->
+        <section class="page-header">
+            <h2>My Routines</h2>
+            <p>View all your saved workout routines. Manage, review, or delete your workouts.</p>
+        </section>
+
+        <!-- Filter and Sort Controls -->
+        <section class="controls-section">
+            <div class="controls-wrapper">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search routines by goal or level..." 
+                        aria-label="Search saved routines">
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterGoal">Filter by Goal:</label>
+                    <select id="filterGoal" aria-label="Filter routines by fitness goal">
+                        <option value="">All Goals</option>
+                        <option value="strength">Strength Building</option>
+                        <option value="definition">Muscle Definition</option>
+                        <option value="cardio">Cardio & Endurance</option>
+                    </select>
+                </div>
+
+                <div class="sort-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy" aria-label="Sort routines">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="goal">By Goal</option>
+                    </select>
+                </div>
+
+                <button id="clearAllBtn" class="btn btn-danger" aria-label="Clear all routines">
+                    🗑️ Clear All
+                </button>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-value" id="totalRoutines">0</div>
+                <div class="stat-label">Total Routines</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="strengthCount">0</div>
+                <div class="stat-label">Strength</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="definitionCount">0</div>
+                <div class="stat-label">Definition</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="cardioCount">0</div>
+                <div class="stat-label">Cardio</div>
+            </div>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorAlert" class="alert alert-error" style="display: none;"></div>
+
+        <!-- Empty State -->
+        <section id="emptyState" class="empty-state">
+            <div class="empty-content">
+                <p class="empty-icon">📋</p>
+                <h3>No Routines Saved Yet</h3>
+                <p>Start by generating your first workout routine!</p>
+                <a href="gymplan.html" class="btn btn-primary">Generate Your First Routine</a>
+            </div>
+        </section>
+
+        <!-- Routines List -->
+        <section id="routinesList" class="routines-container">
+            <!-- Saved routines will be displayed here -->
+        </section>
+    </main>
+
+    <!-- Delete Confirmation Modal -->
+    <dialog id="deleteModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3>Delete Routine?</h3>
+            <p>Are you sure you want to delete this routine? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+                <button id="cancelDeleteBtn" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Routine Details Modal -->
+    <dialog id="detailsModal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="modalTitle">Routine Details</h3>
+            
+            <div class="modal-meta">
+                <span id="modalGoal" class="meta-badge"></span>
+                <span id="modalLevel" class="meta-badge"></span>
+                <span id="modalDuration" class="meta-badge"></span>
+                <span id="modalDate" class="meta-badge"></span>
+            </div>
+
+            <div id="modalExercises" class="modal-exercises">
+                <!-- Exercises will be displayed here -->
+            </div>
+
+            <div class="modal-actions">
+                <button id="closeDetailsBtn" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          © <span id="currentYear"></span> EasyGym – EasyPlan. All rights
+          reserved.
+        </p>
+        <p>👨‍💻 Derek Moscui Maldonado 👨‍💻 Quito, Ecuador</p>
+        <p id="lastModified">Last Modification:</p>
+        <div class="footer-links">
+          <a href="./attributions.html">Attributions</a>
+          <a href="#" id="videoLink">Video Demonstration</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/history.js"></script>
+    <script type="module" src="../scripts/date.js"></script>
+</body>
+
+</html>

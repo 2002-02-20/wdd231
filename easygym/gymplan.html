@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Generator | EasyGym – EasyPlan</title>
+    <meta name="description"
+        content="Generate your personalized workout routine. Select your fitness goal, experience level, and available time to get customized exercises instantly.">
+    <meta name="author" content="Derek Abraham Moscui Maldonado">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Routine Generator | EasyGym – EasyPlan">
+    <meta property="og:description"
+        content="Create personalized workout routines based on your goals, level, and available time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/easygym/gymplan.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon-routine-page.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/gymplan.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+        <a href="./index.html"><h1>EasyGym – EasyPlan</h1></a>
+           
+        </div>
+        <nav class="navbar">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gymplan.html" class="active">Routine Generator</a></li>
+                <li><a href="history.html">My Routines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Title -->
+        <section class="page-header">
+            <h2>Routine Generator</h2>
+            <p>Customize your workout by selecting your fitness goal, experience level, and available time.</p>
+        </section>
+
+        <!-- Generator Form -->
+        <section class="generator-section">
+            <form id="routineForm" class="routine-form" novalidate>
+                <div class="form-group">
+                    <label for="fitnessGoal">Fitness Goal</label>
+                    <select id="fitnessGoal" name="fitnessGoal" required aria-label="Select your fitness goal">
+                        <option value="">-- Select a Goal --</option>
+                        <option value="strength">Strength Building</option>
+                        <option value="definition">Muscle Definition</option>
+                        <option value="cardio">Cardio & Endurance</option>
+                    </select>
+                    <span class="error-message" id="goalError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="experienceLevel">Experience Level</label>
+                    <select id="experienceLevel" name="experienceLevel" required aria-label="Select your experience level">
+                        <option value="">-- Select a Level --</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <span class="error-message" id="levelError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Workout Duration (minutes)</label>
+                    <select id="duration" name="duration" required aria-label="Select workout duration">
+                        <option value="">-- Select Duration --</option>
+                        <option value="30">30 minutes</option>
+                        <option value="45">45 minutes</option>
+                        <option value="60">60 minutes</option>
+                    </select>
+                    <span class="error-message" id="durationError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Generate My Routine</button>
+            </form>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating your routine...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorAlert" class="alert alert-error" style="display: none;"></div>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <div class="results-header">
+                <h3>Your Personalized Routine</h3>
+                <div class="results-meta">
+                    <span id="resultGoal" class="meta-badge"></span>
+                    <span id="resultLevel" class="meta-badge"></span>
+                    <span id="resultDuration" class="meta-badge"></span>
+                </div>
+            </div>
+
+            <div class="routine-controls">
+                <button id="saveRoutineBtn" class="btn btn-success" aria-label="Save this routine">
+                    💾 Save Routine
+                </button>
+                <button id="generateNewBtn" class="btn btn-secondary" aria-label="Generate a new routine">
+                    🔄 Generate New
+                </button>
+            </div>
+
+            <!-- Exercises List -->
+            <div id="exercisesList" class="exercises-container">
+                <!-- Generated exercises will be inserted here -->
+            </div>
+
+            <!-- Routine Summary -->
+            <div class="routine-summary">
+                <h4>Routine Summary</h4>
+                <ul id="summaryList">
+                    <!-- Summary items will be inserted here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Empty State -->
+        <section id="emptyState" class="empty-state">
+            <div class="empty-content">
+                <p class="empty-icon">🏋️</p>
+                <h3>No Routine Generated Yet</h3>
+                <p>Fill out the form above and click "Generate My Routine" to get started with your personalized workout plan.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <dialog id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3>Success!</h3>
+            <p id="successMessage">Your routine has been saved successfully.</p>
+            <button id="modalCloseBtn" class="btn btn-primary">Close</button>
+        </div>
+    </dialog>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          © <span id="currentYear"></span> EasyGym – EasyPlan. All rights
+          reserved.
+        </p>
+        <p>👨‍💻 Derek Moscui Maldonado 👨‍💻 Quito, Ecuador</p>
+        <p id="lastModified">Last Modification:</p>
+        <div class="footer-links">
+          <a href="#" id="videoLink">Video Demonstration</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/gymplan.js"></script>
+    <script type="module" src="../scripts/date.js" defer></script>
+</body>
+
+</html>
